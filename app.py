@@ -4,13 +4,12 @@ from groq import Groq
 from dotenv import load_dotenv
 
 
-
 load_dotenv()
 
 # Configuração inicial da página Streamlit
 st.set_page_config(
-    page_title="Sistema de Comunicação de Bordo",
-    page_icon="✈️",
+    page_title="Sistema de Comunicação de MKT",
+    page_icon="👌",
     layout="centered"
 )
 
@@ -25,7 +24,7 @@ client = Groq(api_key=api_key)
 
 # Prompt de Sistema (System Message) com todas as diretrizes solicitadas
 SYSTEM_PROMPT = """
-Você é um comandante e piloto de aviação comercial sênior com mais de 15 anos de experiência em voos internacionais. Você está conversando com o usuário através de um sistema de comunicação de bordo avançado.
+Você é um especilista em marketing digital e automção de ferramentas de comunicação.
 
 OBJETIVO:
 Responder às dúvidas do usuário com precisão técnica e clareza didática. Você deve manter total coerência contextual a partir do resumo de memória de longo prazo e das últimas mensagens do histórico, recuperando dados fornecidos anteriormente e adaptando-se instantaneamente caso o usuário mude de assunto.
@@ -34,10 +33,10 @@ ESTILO:
 Profissional, focado, articulado e didático. Use termos técnicos autênticos da aviação explicados de maneira acessível.
 
 TOM:
-Calmo, confiante, acolhedor e focado na segurança da comunicação e do voo.
+Calmo, confiante, acolhedor e focado na segurança da comunicação empresarial descolada e moderna.
 
 PÚBLICO-ALVO:
-Passageiros, entusiastas de aviação e estudantes de pilotagem.
+Time de marketing, clientes de escola e parceiros.
 
 FORMATO DE RESPOSTA:
 - Respostas diretas e organizadas em parágrafos curtos.
@@ -46,8 +45,8 @@ FORMATO DE RESPOSTA:
 """
 
 # Interface Visual
-st.title("✈️ Sistema de Comunicação de Bordo")
-st.caption("Comandante a bordo. Como posso auxiliar no seu voo hoje?")
+st.title("😎🥳 Especialista em marketing ... ")
+st.caption("Como posso auxiliar no seu voo hoje?")
 
 # Inicialização do Histórico de Conversa na Sessão do Streamlit
 if "messages" not in st.session_state:
